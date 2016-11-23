@@ -1,0 +1,60 @@
+/*
+Name: Connor McGrory
+Email: Connor_McGrroy@student.uml.edu
+Date: November 23, 2016
+For: GUI Programming I, UMass Lowell
+Assignement No. 8
+This webpage allows the user to create a dynamic multiplication table using sliders and tabs.
+*/
+
+
+/* A simple background color is applied to body here.  Also, everything within the body is centered. */
+body {
+  background-color: #88AAFF;
+  text-align: center;
+}
+
+
+
+/* Putting a margin after the form creates some space between the form and the generated table. */
+form {
+  margin-bottom: 10px;
+}
+
+
+
+/* The generated table is centered here. */
+table {
+  text-align: center;
+  margin: auto;
+}
+
+
+
+/* The next four blocks color the grid in a cascading green and yellow checkerboard pattern. */
+tr:nth-child(2n) td:nth-child(2n) {
+  background-color: yellow;
+}
+
+tr:nth-child(2n+1) td:nth-child(2n+1) {
+  background-color: yellow;
+}
+
+tr:nth-child(2n+1) td:nth-child(2n) {
+  background-color: green;
+}
+
+tr:nth-child(2n) td:nth-child(2n+1) {
+  background-color: green;
+}
+
+
+
+/*  The next two blocks make the first column and first row bold.  These represent the multipliers and multiplicands. */
+tr td:nth-child(1) {
+  font-weight: bold;
+}
+
+tr:nth-child(1) {
+  font-weight: bold;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<!--
+Name: Connor McGrory
+Email: Connor_McGrroy@student.uml.edu
+Date: November 23, 2016
+For: GUI Programming I, UMass Lowell
+Assignement No. 8
+This webpage allows the user to create a dynamic multiplication table using sliders and tabs.
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>
+			Homework 8
+		</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href = "https://code.jquery.com/ui/1.11.4/themes/black-tie/jquery-ui.css" rel = "stylesheet">
+
+	</head>
+	<body>
+    <h1>Multiplication Table</h1>
+    <form id="multTable">
+      Row Start: <input type="text" name="row_start" id="row_start" value=1>
+			<input id="slider1" type="range" min="0" max="20" value=1><br>
+
+      Row End: <input type="text" name="row_end" id="row_end" value=12>
+			<input id="slider2" type="range" min="0" max="20"value=12><br>
+
+      Column Start: <input type="text" name="column_start" id="column_start" value=1>
+			<input id="slider3" type="range" min="0" max="20"value=1><br>
+
+      Column End: <input type="text" name="column_end" id="column_end" value=12>
+			<input id="slider4" type="range" min="0" max="20"value=12><br>
+
+      <input type="submit" value="Create Table" class="myButton" id="myButton">
+    </form>
+
+		<div id="tabs">
+			<ul></ul>
+		</div>
+
+		<div id="boxes">
+			<button type='button' id='massDelete'>Delete Selected</button></br>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="javascript/javascript.js"></script>
+		<script>
+			$(function() {
+				 $("#tabs").tabs();
+				 $("#tabs").hide();
+				 $("#massDelete").hide();
+			});
+		</script>
+  </body>
+</html>
